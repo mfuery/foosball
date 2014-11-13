@@ -1,0 +1,35 @@
+{
+    "name": "mfuery/foos",
+    "version": "0.1",
+    "description": "Foosball",
+    "keywords": ["foosball"],
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Michael Fuery",
+            "email": "mfuery@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Foosball\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:mfuery/foosball"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.zendframework.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "zendframework/zend-config": "2.0.*",
+        "zendframework/zend-http": "2.0.*"
+    },
+    "require-dev": {
+    }
+}
