@@ -2,14 +2,28 @@
 
 namespace Foosball;
 
+use \Zend\Db\Adapter;
+
 class Db
 {
 	/**
-	 * @var
+	 * @var \Zend\Db\Adapter
 	 */
 	protected static $db;
 
-	public function connect() {
-		new \PDO($dsn, $username, $password);
+	/**
+	 *
+	 */
+	public static function get() {
+		if (!static::$db) {
+			static::$db = new Adapter\Adapter(array(
+				'driver' => 'Pdo_Mysql',
+				'database' => 'foosball',
+				'username' => 'root',
+				'password' => 'root'
+			));
+		}
+
+		return static::$db;
 	}
 }
